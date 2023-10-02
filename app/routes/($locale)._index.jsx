@@ -3,6 +3,8 @@ import {Await, useLoaderData, Link} from '@remix-run/react';
 import {Suspense} from 'react';
 import {Image, Money} from '@shopify/hydrogen';
 
+// import CollectionsGrid from 'collections'
+
 export const meta = () => {
   return [{title: 'Hydrogen | Home'}];
 };
@@ -10,18 +12,26 @@ export const meta = () => {
 export async function loader({context}) {
   const {storefront} = context;
   const {collections} = await storefront.query(FEATURED_COLLECTION_QUERY);
-  const featuredCollection = collections.nodes[0];
+  const featuredCollection = collections.nodes[2];
   const recommendedProducts = storefront.query(RECOMMENDED_PRODUCTS_QUERY);
 
-  return defer({featuredCollection, recommendedProducts});
+  return defer({featuredCollection, recommendedProducts, collections});
 }
 
 export default function Homepage() {
   const data = useLoaderData();
   return (
-    <div className="home">
-      <FeaturedCollection collection={data.featuredCollection} />
-      <RecommendedProducts products={data.recommendedProducts} />
+    <div className="home grid grid-flow-row gap-2 gap-y-6 lg:gap-6 grid-cols-1 sm:grid-cols-3">
+      {/* <FeaturedCollection collection={data.featuredCollection} /> */}
+      {data.collections.nodes.map((node) => {
+        // return (node.handle + '\n')
+        return (
+        <div className=''>
+          <FeaturedCollection collection={node} />
+          {/* <CollectionsGrid collections={node} /> */}
+        </div>)
+      })}
+      {/* <RecommendedProducts products={data.recommendedProducts} /> */}
     </div>
   );
 }
@@ -31,15 +41,19 @@ function FeaturedCollection({collection}) {
   const image = collection?.image;
   return (
     <Link
-      className="featured-collection"
+      className=""
       to={`/collections/${collection.handle}`}
     >
       {image && (
-        <div className="featured-collection-image">
-          <Image data={image} sizes="100vw" />
+        <div className="aspect-square">
+          <Image data={image}
+          // key={id}
+          crop='center'
+          className='aspect-square'
+          alt={`Image of ${collection.title}`} />
         </div>
       )}
-      <h1>{collection.title}</h1>
+      <h1 className='text-align-center whitespace-pre-wrap max-w-prose font-medium text-copy'>{collection.title}</h1>
     </Link>
   );
 }
@@ -93,7 +107,7 @@ const FEATURED_COLLECTION_QUERY = `#graphql
   }
   query FeaturedCollection($country: CountryCode, $language: LanguageCode)
     @inContext(country: $country, language: $language) {
-    collections(first: 1, sortKey: UPDATED_AT, reverse: true) {
+    collections(first: 250, sortKey: UPDATED_AT, reverse: true) {
       nodes {
         ...FeaturedCollection
       }
@@ -131,3 +145,21 @@ const RECOMMENDED_PRODUCTS_QUERY = `#graphql
     }
   }
 `;
+
+
+const COLLECTIONS_QUERY = `#graphql
+  query Collections {
+    collections(first:250,query:"collection_type:smart") {
+      nodes {
+        id
+        title
+        handle
+        image {
+          altText
+          width
+          height
+          url
+        }
+      }
+    }
+  }`

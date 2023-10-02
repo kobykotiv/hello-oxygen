@@ -1,5 +1,5 @@
 :root {
-  --aside-width: 400px;
+  --aside-width: 80vw;
   --cart-aside-summary-height-with-discount: 300px;
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
@@ -302,7 +302,7 @@ aside li {
 * routes/__index
 * --------------------------------------------------
 */
-.featured-collection {
+/* .featured-collection {
   display: block;
   margin-bottom: 2rem;
   position: relative;
@@ -332,7 +332,7 @@ aside li {
 
 .recommended-product img {
   height: auto;
-}
+} */
 
 /*
 * --------------------------------------------------

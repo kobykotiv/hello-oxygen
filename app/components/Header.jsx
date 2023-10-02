@@ -8,7 +8,7 @@ export function Header({header, isLoggedIn, cart}) {
       <NavLink prefetch="intent" to="/" style={activeLinkStyle} end>
         <strong>{shop.name}</strong>
       </NavLink>
-      <HeaderMenu menu={menu} viewport="desktop" />
+      {/* <HeaderMenu menu={menu} viewport="desktop" /> */}
       <HeaderCtas isLoggedIn={isLoggedIn} cart={cart} />
     </header>
   );
