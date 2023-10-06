@@ -41,19 +41,19 @@ function FeaturedCollection({collection}) {
   const image = collection?.image;
   return (
     <Link
-      className=""
+      className="text-center aspect-square"
       to={`/collections/${collection.handle}`}
     >
       {image && (
-        <div className="aspect-square">
+        // <div className="aspect-square">
           <Image data={image}
           // key={id}
           crop='center'
           className='aspect-square'
           alt={`Image of ${collection.title}`} />
-        </div>
+        // </div>
       )}
-      <h1 className='text-align-center whitespace-pre-wrap max-w-prose font-medium text-copy'>{collection.title}</h1>
+      <h1 className='whitespace-pre-wrap max-w-prose font-medium text-copy'>{collection.title}</h1>
     </Link>
   );
 }
