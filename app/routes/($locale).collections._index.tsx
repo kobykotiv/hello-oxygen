@@ -5,7 +5,7 @@ import type {CollectionFragment} from 'storefrontapi.generated';
 
 export async function loader({context, request}: LoaderFunctionArgs) {
   const paginationVariables = getPaginationVariables(request, {
-    pageBy: 4,
+    pageBy: 250,
   });
 
   const {collections} = await context.storefront.query(COLLECTIONS_QUERY, {

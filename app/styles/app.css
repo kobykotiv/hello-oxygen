@@ -6,7 +6,7 @@
 >>>>>>> 60d9917 (Started adding neo-brutalist design)
   --cart-aside-summary-height-with-discount: 300px;
   --cart-aside-summary-height: 250px;
-  --grid-item-width: 355px;
+  --grid-item-width: 240px;
   --header-height: 64px;
   --color-dark: #000;
   --color-light: #fff;
@@ -14,10 +14,14 @@
 
 img {
 <<<<<<< HEAD
+<<<<<<< HEAD
   border-radius: 0px;
 =======
   border-radius: 4px;
 >>>>>>> 60d9917 (Started adding neo-brutalist design)
+=======
+  border-radius: 0px;
+>>>>>>> 65315f6 (small improvements)
 }
 
 /*
@@ -57,10 +61,16 @@ aside header .close {
   transition: all 200ms;
   width: 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   &:hover {
     opacity: 1;
   }
 =======
+=======
+  &:hover {
+    opacity: 1;
+  }
+>>>>>>> 65315f6 (small improvements)
 }
 
 aside header .close:hover {
@@ -80,10 +90,16 @@ aside main {
 aside p {
   margin: 0 0 0.25rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
   &:last-child {
     margin: 0;
   }
 =======
+=======
+  &:last-child {
+    margin: 0;
+  }
+>>>>>>> 65315f6 (small improvements)
 }
 
 aside p:last-child {
@@ -97,14 +113,19 @@ aside li {
 
 .overlay {
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* background: rgba(0, 0, 0, 0.2); */
 =======
   background: rgba(0, 0, 0, 0.2);
 >>>>>>> 60d9917 (Started adding neo-brutalist design)
+=======
+  /* background: rgba(0, 0, 0, 0.2); */
+>>>>>>> 65315f6 (small improvements)
   bottom: 0;
   left: 0;
   opacity: 0;
   pointer-events: none;
+<<<<<<< HEAD
 <<<<<<< HEAD
   backdrop-filter: blur(64px);
   position: fixed;
@@ -119,6 +140,14 @@ aside li {
   transition: opacity 400ms ease-in-out;
   transition: opacity 400ms;
 >>>>>>> 60d9917 (Started adding neo-brutalist design)
+=======
+  backdrop-filter: blur(64px);
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 600ms ease-in-out;
+  transition: opacity 600ms;
+>>>>>>> 65315f6 (small improvements)
   visibility: hidden;
   z-index: 10;
 }
@@ -192,6 +221,7 @@ aside li {
   position: sticky;
   top: 0;
   z-index: 1;
+  border-bottom: double purple;
 }
 
 .header-menu-mobile-toggle {
@@ -237,7 +267,7 @@ aside li {
 * --------------------------------------------------
 */
 .footer {
-  background: var(--color-dark);
+  background: purple;
   margin-top: auto;
 }
 
@@ -363,10 +393,14 @@ aside li {
 * --------------------------------------------------
 */
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* .featured-collection {
 =======
 .featured-collection {
 >>>>>>> 60d9917 (Started adding neo-brutalist design)
+=======
+/* .featured-collection {
+>>>>>>> 65315f6 (small improvements)
   display: block;
   margin-bottom: 2rem;
   position: relative;
@@ -397,10 +431,14 @@ aside li {
 .recommended-product img {
   height: auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
 } */
 =======
 }
 >>>>>>> 60d9917 (Started adding neo-brutalist design)
+=======
+} */
+>>>>>>> 65315f6 (small improvements)
 
 /*
 * --------------------------------------------------
@@ -412,11 +450,29 @@ aside li {
   grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(var(--grid-item-width), 1fr));
   margin-bottom: 2rem;
+
+  @media (min-width: 24em) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  text-align-last: center;
 }
 
 .collection-item img {
   height: auto;
+  /* border:color(from color srgb 0 0 0); */
+  border-radius: 1rem;
 }
+
+.collection-item {
+  border: black 2px solid;
+  border-radius: 1rem;
+  box-shadow: 8px 8px 0px 0px purple;
+}
+
+/* .collection-item > h2 {
+  border-top: black 2px solid;
+} */
 
 /*
 * --------------------------------------------------
@@ -440,7 +496,21 @@ aside li {
 
 .product-item img {
   height: auto;
+  border-radius: 1rem;
   width: 100%;
+  
+
+}
+
+.product-item {
+  border: black 2px solid;
+  border-radius: 1rem;
+  box-shadow: 8px 8px 0px 0px purple;
+}
+
+.product-item > *{
+  text-align:center;
+  padding-bottom: 0.5em;
 }
 
 /*

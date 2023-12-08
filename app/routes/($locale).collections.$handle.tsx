@@ -17,7 +17,7 @@ export async function loader({request, params, context}: LoaderFunctionArgs) {
   const {handle} = params;
   const {storefront} = context;
   const paginationVariables = getPaginationVariables(request, {
-    pageBy: 8,
+    pageBy: 64,
   });
 
   if (!handle) {

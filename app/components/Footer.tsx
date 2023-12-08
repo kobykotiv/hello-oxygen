@@ -14,17 +14,17 @@ export function Footer({
 }
 
 function FooterMenu({
-  menu,
+  // menu,
   primaryDomainUrl,
 }: {
-  menu: FooterQuery['menu'];
+  // menu: FooterQuery['menu'];
   primaryDomainUrl: HeaderQuery['shop']['primaryDomain']['url'];
 }) {
   const {publicStoreDomain} = useRootLoaderData();
 
   return (
     <nav className="footer-menu" role="navigation">
-      {(menu || FALLBACK_FOOTER_MENU).items.map((item) => {
+      {(FALLBACK_FOOTER_MENU).items.map((item) => {
         if (!item.url) return null;
         // if the url is internal, we strip the domain
         const url =
