@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Hydrogen template: Hello Oxygen 
+=======
+# Hydrogen template: Skeleton
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
 
 Hydrogen is Shopify’s stack for headless commerce. Hydrogen is designed to dovetail with [Remix](https://remix.run/), Shopify’s full stack web framework. This template contains a **minimal setup** of components, queries and tooling to get started with Hydrogen.
 
@@ -21,7 +25,11 @@ Hydrogen is Shopify’s stack for headless commerce. Hydrogen is designed to dov
 
 **Requirements:**
 
+<<<<<<< HEAD
 - Node.js version 18.0.0 or higher
+=======
+- Node.js version 16.14.0 or higher
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
 
 ```bash
 npm create @shopify/hydrogen@latest

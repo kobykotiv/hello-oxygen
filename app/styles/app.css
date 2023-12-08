@@ -1,5 +1,9 @@
 :root {
+<<<<<<< HEAD
   --aside-width: 80vw;
+=======
+  --aside-width: 400px;
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
   --cart-aside-summary-height-with-discount: 300px;
   --cart-aside-summary-height: 250px;
   --grid-item-width: 355px;
@@ -9,7 +13,11 @@
 }
 
 img {
+<<<<<<< HEAD
   border-radius: 0px;
+=======
+  border-radius: 4px;
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
 }
 
 /*
@@ -48,9 +56,16 @@ aside header .close {
   text-decoration: none;
   transition: all 200ms;
   width: 20px;
+<<<<<<< HEAD
   &:hover {
     opacity: 1;
   }
+=======
+}
+
+aside header .close:hover {
+  opacity: 1;
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
 }
 
 aside header h2 {
@@ -64,9 +79,16 @@ aside main {
 
 aside p {
   margin: 0 0 0.25rem;
+<<<<<<< HEAD
   &:last-child {
     margin: 0;
   }
+=======
+}
+
+aside p:last-child {
+  margin: 0;
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
 }
 
 aside li {
@@ -74,17 +96,29 @@ aside li {
 }
 
 .overlay {
+<<<<<<< HEAD
   /* background: rgba(0, 0, 0, 0.2); */
+=======
+  background: rgba(0, 0, 0, 0.2);
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
   bottom: 0;
   left: 0;
   opacity: 0;
   pointer-events: none;
+<<<<<<< HEAD
   backdrop-filter: blur(64px);
   position: fixed;
   right: 0;
   top: 0;
   transition: opacity 600ms ease-in-out;
   transition: opacity 600ms;
+=======
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms;
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
   visibility: hidden;
   z-index: 10;
 }
@@ -93,7 +127,11 @@ aside li {
   background: transparent;
   border: none;
   color: transparent;
+<<<<<<< HEAD
   height: 100vh;
+=======
+  height: 100%;
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
   left: 0;
   position: absolute;
   top: 0;
@@ -111,6 +149,7 @@ aside li {
   width: 100%;
 }
 
+<<<<<<< HEAD
 .overlay {
   &:target {
     opacity: 1;
@@ -121,6 +160,16 @@ aside li {
   &:target aside {
     transform: translateX(calc(var(--aside-width) * -1));
   }
+=======
+.overlay:target {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+/* reveal aside */
+.overlay:target aside {
+  transform: translateX(calc(var(--aside-width) * -1));
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
 }
 
 /*
@@ -130,9 +179,14 @@ aside li {
 */
 .header {
   align-items: center;
+<<<<<<< HEAD
   background: #ffffff80;
   display: flex;
   backdrop-filter: blur(1.5rem);
+=======
+  background: #fff;
+  display: flex;
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
   height: var(--header-height);
   padding: 0 1rem;
   position: sticky;
@@ -154,7 +208,10 @@ aside li {
 
 .header-menu-desktop {
   display: none;
+<<<<<<< HEAD
   /* backdrop-filter: blur(4px); */
+=======
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
   grid-gap: 1rem;
   @media (min-width: 45em) {
     display: flex;
@@ -305,7 +362,11 @@ aside li {
 * routes/__index
 * --------------------------------------------------
 */
+<<<<<<< HEAD
 /* .featured-collection {
+=======
+.featured-collection {
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
   display: block;
   margin-bottom: 2rem;
   position: relative;
@@ -335,7 +396,11 @@ aside li {
 
 .recommended-product img {
   height: auto;
+<<<<<<< HEAD
 } */
+=======
+}
+>>>>>>> 60d9917 (Started adding neo-brutalist design)
 
 /*
 * --------------------------------------------------
