@@ -1,5 +1,5 @@
 {
-  "name": "hello-world",
+  "name": "hello-oxygen",
   "private": true,
   "sideEffects": false,
   "version": "0.0.0",
@@ -16,7 +16,7 @@
     "@remix-run/react": "1.19.1",
     "@shopify/cli": "3.49.2",
     "@shopify/cli-hydrogen": "^5.4.0",
-    "@shopify/hydrogen": "^2023.7.9",
+    "@shopify/hydrogen": "^2023",
     "graphql": "^16.6.0",
     "graphql-tag": "^2.12.6",
     "isbot": "^3.6.6",
