@@ -392,19 +392,6 @@ aside li {
 * routes/__index
 * --------------------------------------------------
 */
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* .featured-collection {
-=======
-.featured-collection {
->>>>>>> 60d9917 (Started adding neo-brutalist design)
-=======
-/* .featured-collection {
->>>>>>> 65315f6 (small improvements)
-  display: block;
-  margin-bottom: 2rem;
-  position: relative;
-}
 
 .featured-collection-image {
   aspect-ratio: 1 / 1;
@@ -430,15 +417,7 @@ aside li {
 
 .recommended-product img {
   height: auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
-} */
-=======
 }
->>>>>>> 60d9917 (Started adding neo-brutalist design)
-=======
-} */
->>>>>>> 65315f6 (small improvements)
 
 /*
 * --------------------------------------------------
@@ -470,9 +449,9 @@ aside li {
   box-shadow: 8px 8px 0px 0px purple;
 }
 
-/* .collection-item > h2 {
+.collection-item > h2 {
   border-top: black 2px solid;
-} */
+}
 
 /*
 * --------------------------------------------------
